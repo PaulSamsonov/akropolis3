@@ -1,0 +1,99 @@
+@value white, secondary from 'style/colors';
+@value mobile, tablet from 'style/breakpoints';
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 10;
+}
+
+.modalOpen {
+	display: block;
+}
+
+.modalClose {
+	display: block;
+	animation: fadeOut 200ms ease forwards 1;
+	opacity: 1;
+}
+
+.backdrop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	animation: fadeIn 300ms ease forwards 1;
+	cursor: no-drop;
+}
+
+.inner {
+	position: fixed;
+	box-sizing: border-box;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+	animation: in 300ms ease forwards 1;
+	max-height: 95%;
+	border-radius: 20px;
+	box-shadow: 0 0 120px 0 rgba(0,0,0,.2);
+	border: 19px solid white;
+	overflow: auto;
+
+	@media mobile {
+		overflow: auto;
+		max-height: unset;
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+		border-width: 0px;
+	}
+
+	@media tablet {
+		overflow: auto;
+		max-height: unset;
+		width: 90%;
+		max-height: 90%;
+		height: auto;
+		border-radius: 20px;
+		border: 19px solid white;
+	}
+}
+
+.closeBtnWrap {
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: flex-end;
+
+	& button {
+		cursor: pointer;
+		color: secondary;
+		line-height: 1;
+		font-size: 35px;
+		width: 40px;
+	}
+}
+
+.aboutLink {
+	color: #00C280;
+	transition: all .3s;
+	
+	&:hover {
+		color: #2039EC;
+	}
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+	100% { opacity: 0; }
+}
+
+@keyframes in {
+	0% { opacity:0; transform:translate(-50%, -75%); }
+}

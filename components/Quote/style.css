@@ -1,0 +1,67 @@
+@value tablet, mobile, small_mobile from 'style/breakpoints.css';
+@value colors: "style/colors.css";
+@value secondary from colors;
+
+.quote {
+    width: 800px;
+    margin: 30px auto 0;
+    text-align: center;
+
+    @media mobile {
+        width: 343px;
+        margin-top: 0;
+    }
+
+    @media tablet {
+        width: 470px;
+    }
+
+    @media small_mobile {
+        width: 320px;
+    }
+}
+
+.sentence {
+    width: 752px;
+    font-family: "BrandonGrotesque-Bold";
+    font-size: 32px;
+    letter-spacing: -0.24px;
+    line-height: 48px;
+    text-align: center;
+    margin: 0 auto;
+
+    @media mobile {
+        width: 343px;
+        font-size: 24px;
+        font-weight: 900;
+        letter-spacing: 0.75px;
+        line-height: 40px;
+    }
+
+    @media tablet {
+        font-size: 28px;
+        width: 470px;
+    }
+
+    @media small_mobile {
+        width: 300px;
+    }
+}
+
+.name {
+    width: 211px;
+    color: secondary;
+    font-family: "Source Sans Pro";
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.13px;
+    line-height: 28px;
+    margin: 23px auto 0;
+
+    @media mobile {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: -0.1px;
+        line-height: 28px;
+    }
+}

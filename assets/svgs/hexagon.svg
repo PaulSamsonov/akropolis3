@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="172" height="192" viewBox="0 0 172 192">
+  <defs>
+    <rect id="hexagon-a" width="149" height="210"/>
+    <rect id="hexagon-c" width="149" height="210"/>
+    <linearGradient id="hexagon-e" x1="17.009%" x2="50%" y1="24.352%" y2="79.84%">
+      <stop offset="0%" stop-color="#10208D"/>
+      <stop offset="100%" stop-color="#2039EC"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-634 -2788)">
+    <rect width="1440" height="18640" fill="none"/>
+    <g transform="translate(571 2779)">
+      <g opacity=".24">
+        <mask id="hexagon-b" fill="#fff">
+          <use xlink:href="#hexagon-a"/>
+        </mask>
+        <g fill="#09103D" stroke="#09103D" mask="url(#hexagon-b)">
+          <g transform="translate(63.965 10.596)">
+            <polygon points="84.646 45 128.293 69.54 128.293 118.62 84.646 143.16 41 118.62 41 69.54" opacity=".528"/>
+            <polygon points="84.283 0 168.566 47.289 168.566 141.867 84.283 189.156 0 141.867 0 47.289" opacity=".184"/>
+            <polygon points="84.169 80 97.338 87.344 97.338 102.032 84.169 109.376 71 102.032 71 87.344"/>
+          </g>
+        </g>
+      </g>
+      <g transform="matrix(-1 0 0 1 298 0)">
+        <mask id="hexagon-d" fill="#fff">
+          <use xlink:href="#hexagon-c"/>
+        </mask>
+        <g fill="url(#hexagon-e)" mask="url(#hexagon-d)">
+          <g transform="translate(63.965 9.596)">
+            <polygon points="84.646 46 128.293 70.54 128.293 119.62 84.646 144.16 41 119.62 41 70.54" opacity=".157"/>
+            <polygon points="84.283 0 168.566 47.289 168.566 141.867 84.283 189.156 0 141.867 0 47.289" opacity=".106"/>
+            <polygon stroke="url(#hexagon-e)" points="84.169 80 97.338 87.344 97.338 102.032 84.169 109.376 71 102.032 71 87.344" opacity=".562"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

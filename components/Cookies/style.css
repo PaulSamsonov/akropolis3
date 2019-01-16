@@ -1,0 +1,37 @@
+@value secondary, bg_cookies from "style/colors";
+@value secondary_font from "style/fonts";
+
+.cookiesDisclaimer {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background-color: bg_cookies;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transform: translate3d(0, 100%, 0);
+    transition:  transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    & p {
+      font-family: secondary_font;
+      font-size: 16px;
+      padding: 0 10px 0 10px;
+      & a {
+        color: secondary;
+      }
+    }
+}
+
+.visible {
+    transform: translate3d(0, 0, 0);
+}
+
+@media only screen and (max-width: 666px) {
+    .cookiesDisclaimer p {
+        font-size: 12px;
+        letter-spacing: -0.07px;
+        line-height: 18px;
+    }
+}

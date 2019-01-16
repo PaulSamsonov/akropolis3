@@ -1,0 +1,50 @@
+.ourVisionContainer {
+    width: 1103px;
+}
+
+.titleContainer > * {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-transform: uppercase;
+	height: 106px;
+	color: #192EC5;
+	font-size: 35px;
+	font-weight: bold;
+	letter-spacing: 0.28px;
+	line-height: 53px;
+}
+
+.bar {
+    transform: rotate(0.995turn);
+	box-sizing: border-box;
+	height: 42px;
+	width: 1103px;
+    border-bottom: 2px solid #4BD0C4;
+    margin-bottom: 115px;
+}
+
+.mainText {
+    margin: 0 206px 305px 206px;
+	height: 160px;
+	color: #0A1461;
+	font-size: 26px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.features {
+    width: 1103px;
+    display: flex;
+    justify-content: space-between;
+
+    & div {
+        width: 315px;
+        color: #0A1461;
+        font-size: 20px;
+        line-height: 31px;
+        text-align: center;
+    }
+}

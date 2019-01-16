@@ -1,0 +1,16 @@
+{
+  "name": "Akropolis",
+  "short_name": "Akropolis",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "natural",
+  "background_color": "#2D3D66",
+  "theme_color": "#2D3D66",
+  "icons": [
+    {
+      "src": "assets/iconLogo.png",
+      "type": "image/png",
+      "sizes": "164x124"
+    }
+  ]
+}

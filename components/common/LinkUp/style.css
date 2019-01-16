@@ -1,0 +1,35 @@
+@value (
+    main,
+    secondary,
+    secondary_light,
+    white,
+    primary_btn_bg_1,
+    primary_btn_bg_2,
+    secondary_btn_bg
+) from 'style/colors';
+@value desktop, mobile, small_mobile from 'style/breakpoints';
+@value primary_font_bold from 'style/fonts';
+
+.scrollup{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: fixed;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 15px;
+    z-index: 9999999;
+}
+.scrollup:hover{
+    color: #2D3D66;
+}
+
+.scrollupPos1{
+    bottom: 25px;
+    right: 31px;
+}
+.scrollupPos2{
+    bottom: 60px;
+    right: 31px;
+}

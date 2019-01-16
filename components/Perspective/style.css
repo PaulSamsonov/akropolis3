@@ -1,0 +1,160 @@
+@value secondary from 'style/colors';
+@value desktop, mobile, tablet, small_mobile from 'style/breakpoints';
+@value primary_font_regular, primary_font_black, primary_font_bold, secondary_font from 'style/fonts';
+
+.perspective {
+    @media mobile {
+        width: 100%;
+        margin-top: 62px;
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-family: primary_font_black;
+    font-size: 44px;
+    letter-spacing: 0.5px;
+    line-height: 48px;
+    text-align: center;
+
+    @media mobile {
+        font-size: 24px;
+        letter-spacing: 0.13px;
+    }
+}
+
+.comparisonHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    margin: auto;
+
+    @media mobile {
+        display: none;
+    }
+}
+
+.comparisonHeader span {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 24px;
+    font-family: primary_font_regular;
+    font-size: 16px;
+    letter-spacing: -0.09px;
+    line-height: 26px;
+}
+
+.comparisonListing {
+    margin: 0 auto 96px auto;
+    display: flex;
+    justify-content: center;
+    font-family: secondary_font;
+
+    @media mobile {
+        display: block;
+        position: relative;
+        height: 280px;
+        padding: 15px 16px 0 16px;
+        max-width: 450px;
+    }
+
+    @media tablet {
+        max-width: 430px;
+    }
+}
+
+.comparisonListing ul {
+    list-style-type: disc;
+
+    @media mobile {
+        direction: ltr;
+        width: 305px;
+        padding-left: 30px;
+        position: absolute;
+
+        & li {
+          padding-left: 15px;
+        }
+    }
+
+    @media small_mobile {
+        width: 290px;
+    }
+
+    @media tablet {
+        width: 100%;
+    }
+
+    & li {
+        padding-bottom: 20px;
+        line-height: 25px;
+    }
+}
+
+.comparisonListingLeft {
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    width: 520px;
+    direction: rtl;
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
+    @media mobile {
+        color: inherit;
+    }
+
+    @media desktop {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    &.showComparisionLeft {
+         transform: translate3d(0, 0, 0);
+         opacity: 1;
+    }
+}
+
+.comparisonListingRight {
+    width: 520px;
+    color: secondary;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.09px;
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    will-change: transform, opacity;
+
+    @media mobile {
+        color: inherit;
+        font-weight: normal;
+        letter-spacing: -0.1px;
+    }
+
+    @media desktop {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    &.showComparisionRight {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.comparisionSwitch {
+    margin-top: 25px;
+    margin-bottom: 28px;
+    display: none;
+
+    @media mobile {
+        display: block;
+    }
+}
+
+.mountainEdge {
+    width: 100%;
+}

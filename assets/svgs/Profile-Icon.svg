@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="15px" viewBox="0 0 12 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <g id="Desktop_V2" transform="translate(-1359.000000, -163.000000)" fill="#2D3D66" fill-rule="nonzero">
+            <g id="Header" transform="translate(0.000000, -1.000000)">
+                <g id="Social" transform="translate(1340.000000, 144.000000)">
+                    <g id="Profile-Icon" transform="translate(19.000000, 20.000000)">
+                        <path d="M9.23076923,3.28125 C9.23076923,5.11209239 7.77926421,6.5625 6,6.5625 C4.22073579,6.5625 2.76923077,5.08831522 2.76923077,3.28125 C2.76923077,1.47418478 4.22073579,0 6,0 C7.77926421,8.4473491e-16 9.23076923,1.45040761 9.23076923,3.28125 Z" id="Shape"></path>
+                        <path d="M12,13.495106 C12,15.5016313 0,15.5016313 0,13.495106 C0,10.5097879 2.6744186,7.5 6,7.5 C9.3255814,7.5 12,10.5097879 12,13.495106 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

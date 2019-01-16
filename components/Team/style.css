@@ -1,0 +1,95 @@
+@value main from 'style/colors';
+@value mobile from 'style/breakpoints';
+@value primary_font_black, primary_font_bold, secondary_font from 'style/fonts';
+
+.teamContainer {
+    width: 100%;
+}
+
+.title {
+    text-transform: uppercase;
+    margin-bottom: 73px;
+    color: main;
+    font-family: primary_font_black;
+    font-size: 44px;
+    letter-spacing: 0.24px;
+    line-height: 48px;
+    text-align: center;
+
+    @media mobile {
+        font-size: 26px;
+        line-height: 40px;
+        margin-bottom: 35px;
+    }
+}
+
+.secondaryTitle {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: main;
+    font-family: primary_font_bold;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: 38px;
+    text-align: center;
+
+    @media mobile {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
+.description {
+    font-family: secondary_font;
+    margin: auto;
+    margin-bottom: 40px;
+    max-width: 436px;
+    color: main;
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    line-height: 28px;
+    text-align: center;
+
+    @media mobile {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 30px;
+    }
+}
+
+.teamWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.coreTeamContainer {
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.linked_link {
+    text-align: center;
+
+    & a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          color: #5C73E3;
+          font-size: 14px;
+          font-family: "BrandonGrotesque-Bold", sans-serif;
+          text-transform: uppercase;
+      }
+
+    & span {
+        margin-right: 15px;
+    }
+
+    & img {
+        max-width: 25px;
+    }
+}

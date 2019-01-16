@@ -1,0 +1,181 @@
+@value main, secondary from 'style/colors';
+@value tablet, mobile, small_mobile from 'style/breakpoints';
+@value primary_font_bold, secondary_font from 'style/fonts';
+
+.personContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    width: 292px;
+    margin-bottom: 100px;
+
+    @media mobile {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    @media small_mobile {
+        width: 80%;
+    }
+
+    @media tablet {
+        width: 46%;
+    }
+}
+
+.personData {
+    text-align: center;
+}
+
+.photo {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+
+    @media mobile {
+        width: 100%;
+    }
+
+    @media tablet {
+        width: 100%;
+    }
+
+    & img {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+.photoColor {
+    opacity: 0.92;
+    transition: opacity .4s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    min-height: 100px;
+
+    @media mobile {
+        min-height: initial;
+    }
+
+    @media small_mobile {
+        min-height: initial;
+    }
+
+    @media tablet {
+        min-height: 70px;
+    }
+}
+
+.title {
+    color: #000000;
+    font-family: primary_font_bold;
+    font-size: 24px;
+    letter-spacing: -0.13px;
+    line-height: 28px;
+    margin-bottom: 6px;
+
+    @media mobile {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+}
+
+.role {
+    color: secondary;
+    font-family: secondary_font;
+    
+    @media mobile {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.group {
+    font-style: italic;
+    font-family: secondary_font;
+    margin: 8px 0 6px 0;
+
+    @media mobile {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+.linkedInIcon {
+    margin-left: 10px;
+
+    @media mobile {
+        margin-left: 5px;
+    }
+
+    & svg {
+        width: 20px;
+        height: 20px;
+
+        @media mobile {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.cv {
+    font-family: secondary_font;
+    margin: 5px 0;
+    color: main;
+    font-size: 16px;
+    letter-spacing: -0.09px;
+    line-height: 26px;
+
+    @media mobile {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+}
+
+.personGithubIcon {
+    @media mobile {
+        padding: 0 1px;
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.btnRead{
+    height: 37px;
+    line-height: 37px;
+    font-size: 16px;
+    border-radius: 18px;
+    padding: 0 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    transition: color .4s ease;
+    width: max-content;
+
+    &:hover {
+        color: #2D3D66;
+    }
+}

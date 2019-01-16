@@ -1,0 +1,151 @@
+@value mobile, small_mobile from 'style/breakpoints';
+@value secondary, secondary_alt, line from 'style/colors';
+@value primary_font_regular, primary_font_black, primary_font_bold, secondary_font from 'style/fonts';
+
+.problemSolution {
+    padding: 60px 30px 72px 30px;
+
+    @media mobile {
+        padding: 0 16px;
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    font-family: primary_font_black;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 44px;
+    letter-spacing: 0.24px;
+    line-height: 48px;
+
+    @media mobile {
+        font-size: 24px;
+        letter-spacing: 0.13px;
+        margin-bottom: 0;
+    }
+}
+
+.subtitle {
+    color: secondary;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    line-height: 28px;
+
+    @media mobile {
+        font-size: 14px;
+        letter-spacing: -0.08px;
+        line-height: 26px;
+    }
+}
+
+.abstract {
+    margin-top: 48px;
+    padding: 0 18px;
+    display: flex;
+
+    @media mobile {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+}
+
+.abstractProblem {
+    max-width: 522px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media mobile {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+.abstractSolution {
+    max-width: 500px;
+
+    @media mobile {
+        margin-top: 36px;
+    }
+}
+
+.abstractProblem p,
+.abstractSolution p {
+    max-width: 520px;
+    margin-bottom: 28px;
+    font-family: secondary_font;
+    color: rgba(45,61,102,0.84);
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    line-height: 28px;
+
+    @media mobile {
+        font-size: 16px;
+        letter-spacing: -0.09px;
+        max-width: 420px;
+    }
+}
+
+.abstractProblem .abstractProblemTitle,
+.abstractSolution .abstractSolutionTitle {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    font-family: primary_font_bold;
+    font-size: 26px;
+    letter-spacing: 0.81px;
+    line-height: 38px;
+
+    @media mobile {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+}
+
+.abstractProblem .abstractProblemIntro,
+.abstractSolution .abstractSolutionIntro {
+    max-width: 420px;
+    margin-bottom: 16px;
+}
+
+.moreInfoText {
+    @media mobile {
+        display: none;
+    }
+}
+
+.readMore {
+    color: secondary_alt;
+    font-family: secondary_font;
+    font-size: 16px;
+    letter-spacing: -0.09px;
+    line-height: 28px;
+    display: none;
+
+    @media mobile {
+        display: block;
+    }
+}
+
+.elipsis {
+    display: none;
+    @media mobile {
+        display: inline;
+    }
+}
+
+.line {
+    height: 387px;
+    width: 2px;
+    border: 1px dashed line;
+    margin: 0 48px;
+    opacity: 0.5;
+    margin-top: 28px;
+
+    @media mobile {
+        display: none;
+    }
+}

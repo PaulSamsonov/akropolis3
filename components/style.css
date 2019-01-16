@@ -1,0 +1,336 @@
+@value (
+    background,
+    white,
+    light,
+    dark,
+    bg_solution,
+    bg_tech,
+    bg_mobileapp,
+    bg_tokensale,
+    bg_media,
+    bg_faqsection,
+    bg_whitepaper,
+    bg_team,
+    bg_roadmap,
+    bg_meetus,
+    bg_faq,
+    bg_joinWaitList,
+    bg_footer,
+    bg_tokenstructure
+) from "style/colors";
+@value desktop, mobile, small_mobile from 'style/breakpoints';
+
+.introSection {
+    padding: 200px 0 320px 0;
+    position: relative;
+    background: url('../assets/bg/intro.jpg') no-repeat center 0 / cover;
+    background-position-y: 100% !important;
+
+    @media mobile {
+      padding-top: 100px;
+      padding-bottom: 160px;
+    }
+
+    &:after {
+        background-color: white;
+        width: 105%;
+        height: 150px;
+        position: absolute;
+        transform: rotate(-2deg);
+        z-index: 1;
+
+        @media mobile {
+            bottom: -80px;
+        }
+    }
+}
+
+.whitepaperSection {
+    padding-top: 83px;
+    padding-bottom: 200px;
+    background: url('../assets/bg/Sketch-BG-Gray.png') bg_whitepaper no-repeat;
+    background-position: top right;
+    position: relative;
+
+    @media mobile {
+        background: url('../assets/bg/Sketch-Blue.png') bg_whitepaper no-repeat;
+        background-position: bottom 2px right -213px;
+        background-size: 867px 372px;
+        padding-bottom: 15px;
+
+        &:before {
+            content: "";
+            background-color: bg_whitepaper;
+            width: 105%;
+            height: 100px;
+            position: absolute;
+            top: -50px;
+            transform: rotate(4deg);
+            z-index: 1;
+        }
+    }
+
+    &:after {
+        content: "";
+        background-color: white;
+        width: 105%;
+        height: 154px;
+        position: absolute;
+        bottom: -50px;
+        transform: rotate(-2deg);
+        z-index: 1;
+    }
+}
+
+.partnersSection {
+    background-color: white;
+}
+
+.solutionSection {
+    position: relative;
+    padding-bottom: 110px;
+
+    @media mobile {
+        padding-bottom: 0;
+    }
+
+    &:before {
+        content: '';
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: bg_solution;
+    }
+
+    &:after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: transparent url('../assets/bg/Sketch-Blue.png') center bottom no-repeat;
+        opacity: 0.6;
+    }
+}
+
+.techSection {
+    padding: 100px 0 135px 0;
+    background: bg_tech url('../assets/bg/Mountains.png') center bottom no-repeat;
+    position: relative;
+
+    @media mobile {
+        padding: 0 0 160px 0;
+    }
+
+    &:before {
+        content: "";
+        background-color: bg_tech;
+        width: 105%;
+        height: 150px;
+        position: absolute;
+        top: -50px;
+        transform: rotate(-2deg);
+        z-index: 1;
+
+        @media mobile {
+            transform: rotate(4deg);
+        }
+    }
+}
+
+.teamSection {
+    padding: 120px 0 0 0;
+    background-color: bg_team;
+    position: relative;
+
+    @media mobile {
+        padding: 0;
+        margin-bottom: -30px;
+
+        &:before {
+            content: "";
+            background-color: bg_team;
+            width: 105%;
+            height: 100px;
+            position: absolute;
+            top: -50px;
+            left: 0;
+            transform: rotate(-2deg);
+            z-index: 1;
+        }
+    }
+}
+
+.advisorsSection {
+    background-color: #F9F9F9;
+    padding-top: 50px;
+    position: relative;
+
+    @media mobile {
+        padding-top: 0;
+    }
+
+    &:before {
+        content: "";
+        background-color: #F9F9F9;
+        width: 105%;
+        height: 100px;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        transform: rotate(-2deg);
+        z-index: 1;
+    }
+}
+
+.tokenSaleSection {
+    padding: 100px 0 100px;
+    background-color: white;
+
+    @media mobile {
+        padding: 50px 0 40px;
+    }
+}
+
+.tokenStructureSection {
+    position: relative;
+    padding: 100px 0 100px;
+    background: bg_tokenstructure url('../assets/bg/topograph.png') right bottom no-repeat;
+
+    @media mobile {
+        padding: 0 0 50px;
+
+        &:before {
+            content: "";
+            background-color: bg_tokenstructure;
+            width: 105%;
+            height: 154px;
+            position: absolute;
+            top: -50px;
+            transform: rotate(-2deg);
+            z-index: 1;
+        }
+    }
+}
+
+.roadmapSection {
+    padding: 100px 0 150px;
+    background: bg_roadmap;
+    position: relative;
+
+    @media mobile {
+        padding: 50px 0 25px;
+    }
+}
+
+.meetUsSection {
+    padding: 80px 0 200px;
+    background-color: bg_meetus;
+    position: relative;
+
+    @media mobile {
+        padding: 0 0 100px 0;
+    }
+
+    &:before {
+        content: "";
+        background-color: bg_meetus;
+        width: 105%;
+        height: 154px;
+        position: absolute;
+        top: -50px;
+        transform: rotate(-2deg);
+        z-index: 1;
+    }
+}
+
+.faqSection {
+    padding: 120px 0 160px 0;
+    background: bg_tech url('../assets/bg/Mountains.png') center bottom no-repeat;
+    position: relative;
+
+    @media mobile {
+        background: bg_tech;
+        padding: 0 0 50px 0;
+    }
+
+    &:before {
+        content: "";
+        background-color: bg_faq;
+        width: 105%;
+        height: 154px;
+        position: absolute;
+        top: -50px;
+        transform: rotate(-2deg);
+        z-index: 1;
+
+        @media mobile {
+            transform: rotate(4deg);
+        }
+     }
+}
+
+.joinWaitListSection {
+    padding: 120px 0 80px 0;
+    position: relative;
+    background: bg_joinWaitList;
+
+    @media mobile {
+        background: bg_tech url('../assets/bg/Mountains.png') right center no-repeat;
+        padding: 0 0 165px 0;
+    }
+
+    &:before {
+         content: "";
+         background-color: bg_joinWaitList;
+         width: 105%;
+         height: 154px;
+         position: absolute;
+         top: -50px;
+         transform: rotate(-2deg);
+         z-index: 1;
+
+         @media mobile {
+             display: none;
+         }
+     }
+}
+
+.footerSection {
+    padding: 96px 50px;
+    background-color: bg_footer;
+    position: relative;
+
+    @media mobile {
+        padding: 0px 0 40px 0;
+
+        &:before {
+            content: "";
+            background-color: bg_footer;
+            width: 105%;
+            height: 154px;
+            position: absolute;
+            top: -50px;
+            transform: rotate(-4deg);
+            z-index: 1;
+        }
+    }
+}
+
+.socialMediaSection {
+    background-color: bg_footer;
+}
+
+.blogSection {
+
+}
+.blogBackground {
+     position: fixed;
+     height: 100vh;
+     width: 100vw;
+}

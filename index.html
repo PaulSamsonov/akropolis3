@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Akropolis - Blockchain Pensions Infrastructure</title>
+    <meta name="keywords" content="akropolis ico review, akropolis, akropolis ico, akropolis blockchain, akropolis coin, the akropolis, akt ico">
+    <meta name="description"
+          content="The Akropolis project aims to be the largest alternative pensions infrastructure in the world. We are creating decentralised pensions on the blockchain and a safer financial future for humanity, built by and for the people.">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>manifest.json">
+    <% if (htmlWebpackPlugin.options.manifest.theme_color) { %>
+    <meta name="theme-color" content="<%= htmlWebpackPlugin.options.manifest.theme_color %>">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117697680-1"></script>-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127952965-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-127952965-1');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+
+      window.dataLayer = window.dataLayer || [];
+      (function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start':
+						new Date().getTime(), event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-P7H3Z9S');
+    </script>
+    <!-- End Google Tag Manager -->
+    <% } %>
+    <% for (var chunk of webpack.chunks) { %>
+    <% if (chunk.names.length === 1 && chunk.names[0] === 'polyfills') continue; %>
+    <% for (var file of chunk.files) { %>
+    <% if (htmlWebpackPlugin.options.preload && file.match(/\.(js|css)$/)) { %>
+    <link rel="preload" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
+    <% } else if (file.match(/manifest\.json$/)) { %>
+    <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath + file %>">
+    <% } %>
+    <% } %>
+    <% } %>
+</head>
+<body>
+<%= htmlWebpackPlugin.options.ssr({
+url: '/'
+}) %>
+<script async type="text/javascript" src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=JFrmSX"></script>
+<script>window.fetch||document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
+<script src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
+</body>
+</html>

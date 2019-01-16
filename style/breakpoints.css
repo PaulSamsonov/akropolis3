@@ -1,0 +1,4 @@
+@value desktop: only screen and (min-width: 1024px);
+@value tablet: only screen and (min-width: 768px) and (max-width: 1023px);
+@value mobile: only screen and (max-width: 1023px);
+@value small_mobile: only screen and (max-width: 374px);

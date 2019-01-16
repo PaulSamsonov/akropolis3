@@ -1,0 +1,44 @@
+@value secondary from "style/colors";
+@value primary_font_black, primary_font_bold from "style/fonts";
+
+.switcherContainer {
+    position: relative;
+    height: 48px;
+    margin: 0 auto;
+}
+
+.switcherMarker {
+    height: 40px;
+    margin: 4px 4px;
+    background-color: secondary;
+    border-radius: 24px;
+    position: absolute;
+    z-index: 0;
+    transition: transform 0.4s ease-in-out;
+}
+
+.switcherSelector {
+    height: 48px;
+    border: 1px solid secondary;
+    border-radius: 24px;
+    padding: 3px;
+    position: absolute;
+    z-index: 1;
+
+    & li {
+        display: inline-block;
+        font-family: primary_font_bold;
+        text-transform: uppercase;
+        color: secondary;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        transition: color 0.4s ease-in-out;
+
+        &.selected {
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@value (
+    main,
+    secondary,
+    secondary_light,
+    white,
+    primary_btn_bg_1,
+    primary_btn_bg_2,
+    secondary_btn_bg
+) from 'style/colors';
+@value desktop, mobile, small_mobile from 'style/breakpoints';
+@value primary_font_bold from 'style/fonts';
+
+.linkBtn {
+    font-family: primary_font_bold;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.linkBtnPrimary {
+    background: linear-gradient(180deg, primary_btn_bg_1 0%, primary_btn_bg_2 100%);
+    box-shadow: inset 0 1px 2px 0 rgba(255,255,255,0.24), 0 1px 2px 0 rgba(38,38,44,0.5);
+    color: white;
+    letter-spacing: 0.7px;
+    text-shadow: 1px 1px rgba(0,0,0,0.24);
+    
+    &:hover {
+        box-shadow: none;
+        background: linear-gradient(0deg, primary_btn_bg_1 0%, primary_btn_bg_2 100%);
+    }
+}
+
+.linkBtnSecondary {
+    background-color: secondary_btn_bg;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+    color: main;
+    letter-spacing: 0.7px;
+    transition: color .4s ease;
+    
+    &:hover {
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+        color: secondary;
+    }
+}
+
+.linkBtnSizeNormal {
+    height: 37px;
+    line-height: 37px;
+    font-size: 16px;
+    border-radius: 18px;
+    padding: 0 20px;
+
+    @media mobile {
+        font-size: 14px
+    }
+}
+
+.linkBtnSizeLarge {
+    height: 66px;
+    border-radius: 32px;
+    font-size: 24px;
+    line-height: 34px;
+    padding: 0 35px;
+
+    @media mobile {
+        font-size: 18px;
+    }
+}
+
+.linkBtnSizeMedium {
+    height: 48px;
+    border-radius: 24px;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    padding: 0 20px;
+
+    @media mobile {
+        height: 37px;
+        border-radius: 19px;
+        line-height: 23px;
+    }
+
+    @media small_mobile {
+        font-size: 14px;
+    }
+}
+
+.linkBtnSizeSmall {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    border-radius: 18px;
+    padding: 0 15px;
+
+    @media mobile {
+        font-size: 12px;
+        letter-spacing: 0.43px;
+        padding: 0 15px;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.highlighted {
+    color: secondary;
+    box-shadow: inset 0 -2px 0 0 secondary_light, 0 2px 4px 0 rgba(0,0,0,0.24);
+    
+    &:hover {
+        box-shadow: inset 0 -2px 0 0 secondary_light, 0 2px 4px 0 rgba(0,0,0,0.24);
+        color: main;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}

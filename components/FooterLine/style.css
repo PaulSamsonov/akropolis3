@@ -1,0 +1,19 @@
+@value secondary_font from 'style/fonts';
+
+.address {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px 16px;
+}
+
+.address p {
+    font-family: secondary_font;
+    font-size: 14px;
+    letter-spacing: -0.08px;
+    line-height: 18px;
+    text-align: center;
+    color: white;
+}

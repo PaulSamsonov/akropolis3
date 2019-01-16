@@ -1,0 +1,30 @@
+@value small_mobile, mobile, tablet from 'style/breakpoints';
+
+.advisorWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.viewMore {
+    display: none;
+
+    @media mobile {
+        display: block;
+        margin-bottom: -15px;
+    }
+}
+
+.hideOnMobile {
+    @media mobile {
+        display: none;
+    }
+}

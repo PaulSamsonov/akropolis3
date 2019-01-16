@@ -1,0 +1,125 @@
+@value secondary from 'style/colors';
+@value desktop, tablet, mobile, small_mobile from 'style/breakpoints';
+@value primary_font_regular, primary_font_bold, primary_font_black, secondary_font from 'style/fonts';
+
+.introContainer {
+	width: 920px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	& > * {
+		text-align: center;
+	}
+
+	@media mobile {
+		max-width: 440px;
+		margin: auto 10px;
+	}
+
+	@media small_mobile {
+		max-width: 300px;
+		margin: auto 10px;
+	}
+}
+
+.title {
+	font-family: primary_font_bold;
+	opacity: 0.8;
+	font-size: 18px;
+	letter-spacing: 1.13px;
+	line-height: 28px;
+	text-transform: uppercase;
+
+	@media mobile {
+		font-family: primary_font_regular;
+		font-weight: 600;
+		font-size: 16px;
+		letter-spacing: -0.09px;
+		line-height: 28px;
+		width: 256px;
+	}
+
+	@media tablet {
+		font-size: 18px;
+		letter-spacing: 1.13px;
+		line-height: 28px;
+		width: 350px;
+	}
+}
+
+.strongTitle {
+	font-family: primary_font_black;
+	text-transform: uppercase;
+	font-size: 56px;
+	letter-spacing: 1px;
+	line-height: 67px;
+	text-align: center;
+	margin-top: 16px;
+
+	@media mobile {
+		font-size: 28px;
+		letter-spacing: 0.5px;
+		line-height: 36px;
+		width: 286px;
+		margin-top: 27px
+	}
+
+	@media tablet {
+		width: 480px;
+		font-size: 38px;
+		letter-spacing: 1px;
+		line-height: 42px;
+	}
+}
+
+.aboveButtonText {
+	font-family: secondary_font;
+	font-size: 18px;
+	letter-spacing: -0.1px;
+	line-height: 28px;
+	text-align: center;
+	margin: 16px auto;
+	width: 493px;
+
+	@media mobile {
+		font-size: 14px;
+		letter-spacing: -0.08px;
+		line-height: 18px;
+		width: 239px;
+		margin-top: 25px;
+	}
+
+	@media tablet {
+		font-size: 18px;
+		letter-spacing: -0.1px;
+		line-height: 28px;
+		width: 400px;
+	}
+}
+
+.joinCommunityButton {
+	margin-top: 32px;
+
+	@media mobile {
+		margin-top: 16px;
+	}
+
+	@media small_mobile {
+		font-size: 16px;
+	}
+}
+
+.joinWaitingListButton {
+	display: none;
+
+	@media mobile {
+		display: flex;
+		position: absolute;
+		bottom: -110px;
+		font-size: 14px;
+	}
+
+	@media tablet {
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,141 @@
+@value mobile from 'style/breakpoints.css';
+@value bg_footer, select_border from 'style/colors.css';
+
+.socialMedia {
+    position: fixed;
+    top: 25%;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+
+    @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+        right: -10px;
+    }
+
+    @media mobile {
+        position: static;
+        background-color: bg_footer;
+        display: flex;
+        justify-content: center;
+        width: 375px;
+        padding-bottom: 16px;
+    }
+
+    & li {
+        margin: 25px;
+        height: 32px;
+        width: 32px;
+
+        @media mobile {
+            height: 40px;
+            width: 40px;
+            margin: 4px;
+            display: inline-block;
+        }
+
+        &:first-child {
+            /*display: none;*/
+            @media mobile {
+                display: inline-block;
+            }
+        }
+
+        &.TelegramCounter {
+            height: 100px;
+            width: 50px;
+            margin: 16px;
+
+            @media mobile {
+                display: none;
+            }
+        }
+
+        &.Medium a svg {
+            @media mobile {
+                top: 1px;
+            }
+        }
+
+        &.LinkedIn a svg {
+            @media mobile {
+                bottom: 1px;
+            }
+        }
+
+        & a {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media mobile {
+                height: 40px;
+                width: 40px;
+            }
+
+            & svg {
+                position: relative;
+            }
+        }
+
+        & svg path {
+            transition: fill .4s ease;
+            fill: #686E87;
+
+            @media mobile {
+                fill: select_border;
+            }
+        }
+
+        &:hover svg path {
+            fill: #5C73E3;
+            @media mobile {
+
+            }
+        }
+    }
+}
+
+.telegramCounterBox {
+    height: 100px;
+    width: 50px;
+    border: 2px solid #686E87;
+    border-radius: 25.5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: border-color, background-color .4s ease;
+
+    & span {
+        color: #686E87;
+    }
+
+    &:hover {
+        background-color: #5C73E3;
+        border-color: #5C73E3;
+
+        & svg path {
+             fill: #FFFFFF !important;
+         }
+
+        & span {
+            color: white;
+        }
+    }
+
+    & span {
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 18px;
+      transition: color .4s ease;
+    }
+
+    & .telegramLoading {
+        width: 18px;
+    }
+}

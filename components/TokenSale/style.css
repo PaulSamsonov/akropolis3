@@ -1,0 +1,129 @@
+@value main from 'style/colors';
+@value mobile from 'style/breakpoints';
+@value primary_font_black, primary_font_bold from 'style/fonts';
+
+.tokenSection {
+    width: 705px;
+
+    @media mobile {
+        width: auto;
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    color: main;
+    font-family: primary_font_black;
+    font-size: 44px;
+    letter-spacing: 0.24px;
+    line-height: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media mobile {
+        font-size: 26px;
+        line-height: 48px;
+    }
+}
+
+.chartsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media mobile {
+        flex-direction: column;
+    }
+}
+
+.chartContainer {
+    @media mobile {
+        margin-bottom: 50px;
+    }
+}
+
+.chart {
+    margin-bottom: 40px;
+}
+
+.secondaryTitle {
+    color: main;
+    font-family: primary_font_bold;
+    font-size: 24px;
+    letter-spacing: -0.13px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info {
+    & li {
+        color: main;
+        font-size: 16px;
+        letter-spacing: -0.09px;
+        line-height: 30px;
+        margin-left: -20px;
+
+        &:before {
+            content: "•";
+            position: relative;
+            font-size: 50px;
+            left: -10px;
+            top: 5px;
+        }
+
+        &:nth-child(1) {
+            &:before {
+                color: #5168df;
+            }
+        }
+
+        &:nth-child(2) {
+            &:before {
+                color: #28365b;
+            }
+        }
+
+        &:nth-child(3) {
+            &:before {
+                color: #5c6580;
+            }
+        }
+
+        &:nth-child(4) {
+            &:before {
+                color: #7e8497;
+            }
+        }
+
+        &:nth-child(5) {
+            &:before {
+                color: #9a98a1;
+            }
+        }
+    }
+}
+
+.tokenProceeds {
+    & .info {
+        & li {
+            &:nth-child(4) {
+                &:before {
+                    color: #615e6e;
+                }
+            }
+    
+            &:nth-child(5) {
+                &:before {
+                    color: #7e8497;
+                }
+            }
+
+            &:nth-child(6) {
+                &:before {
+                    color: #b2b4bc;
+                }
+            }
+        }
+    }
+}

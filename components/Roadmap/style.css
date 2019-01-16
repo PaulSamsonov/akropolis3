@@ -1,0 +1,275 @@
+@value main, secondary, secondary_alt, line, bg_cookies from 'style/colors';
+@value desktop, mobile, tablet, small_mobile from 'style/breakpoints';
+@value primary_font_regular, primary_font_black, primary_font_bold, secondary_font from 'style/fonts';
+
+.roadmapHeader {
+    font-family: primary_font_black;
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 50px;
+
+    @media mobile {
+        font-size: 26px;
+    }
+}
+
+.yearSelect {
+    @media mobile {
+        display: none;
+    }
+}
+
+.roadmapContainer {
+    height: 345px;
+    width: 1024px;
+    position: relative;
+    margin: 48px auto;
+
+    @media mobile {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.roadmapSlide {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(-100%,0,0);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    will-change: transform, opacity;
+
+    @media mobile {
+        display: block;
+        position: static;
+        height: auto;
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+
+    &.visible {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+
+        @media mobile {
+            transform: unset;
+        }
+    }
+
+    &.moveRight {
+        transform: translate3d(100%,0,0);
+
+        @media mobile {
+            transform: unset;
+        }
+    }
+
+    &.size1,
+    &.size2 {
+        & .roadmapContents {
+            max-width: 400px;
+        }
+    }
+
+    &.size3 {
+        & .roadmapContents {
+            max-width: 260px;
+        }
+    }
+
+    &.size4 {
+        & .roadmapContents {
+            max-width: 200px;
+        }
+    }
+
+    @media tablet {
+        & .roadmapContents {
+            width: 400px;
+        }
+    }
+}
+
+.roadmapContents {
+    min-width: 200px;
+    height: 155px;
+    text-align: left;
+    margin-right: 20px;
+    position: relative;
+    border-left: 0.5px dashed #DCDCE0;
+
+    &.odd {
+        margin-top: 187px;
+        padding-top: 10px;
+
+        @media mobile {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+
+    &.present {
+        @media mobile {
+            margin-top: 10px;
+        }
+
+        & .roadmapInfo {
+            @media mobile {
+                margin-top: 10px;
+                padding-top: 0px;
+                border-color: secondary_alt;
+            }
+        }
+
+        & .bullet {
+            @media desktop {
+                transform: scale(1.1);
+            }
+
+            @media mobile {
+                top: -6px;
+                left: -11px;
+            }
+        }
+    }
+
+    &.future {
+        & .bullet {
+            @media mobile {
+                top: 0;
+                left: -6px;
+            }
+        }
+    }
+
+    &.past {
+        & .bullet {
+            @media mobile {
+                background: none;
+                top: 0;
+                left: -6px;
+            }
+        }
+    }
+
+    @media mobile {
+        border-left: unset;
+        position: relative;
+        width: 265px;
+        height: auto;
+        max-width: 350px !important;
+
+        &:last-child {
+            & .roadmapInfo {
+              border: none;
+            }
+        }
+    }
+
+    @media small_mobile {
+        width: 230px;
+    }
+}
+
+.yearLabel {
+    font-family: primary_font_bold;
+    font-size: 16px;
+    letter-spacing: 0.09px;
+    line-height: 16px;
+    color: secondary;
+    margin-left: 16px;
+
+    @media mobile {
+        padding-left: 34px;
+        margin: 0;
+    }
+
+    & span {
+      font-family: primary_font_regular;
+      font-style: italic;
+    }
+}
+
+.roadmapInfo {
+    color: main;
+    font-family: secondary_font;
+    font-size: 14px;
+    letter-spacing: -0.08px;
+    line-height: 19px;
+    margin-top: 12px;
+    margin-left: 16px;
+    white-space: nowrap;
+
+    @media mobile {
+        margin: 3px 0 2px 0;
+        padding: 8px 0 32px 34px;
+        border-left: 2px solid line;
+        white-space: unset;
+    }
+
+    & p:not(:last-child) {
+        margin-bottom: 4px;
+
+        @media mobile {
+            margin-bottom: 6px;
+        }
+    }
+}
+
+.timeline {
+    position: absolute;
+    height: 1px;
+    width: 1024px;
+    top: 170px;
+    background-image: linear-gradient(90deg, transparent, transparent 50%, #fff 50%, #fff 100%), linear-gradient(90deg, bg_cookies, secondary_alt);
+    background-size: 5px 3px, 100% 3px;
+    border: none;
+
+    @media mobile {
+        display: none;
+    }
+}
+
+.bullet {
+    position: absolute;
+    top: 158px;
+    left: -12px;
+    height: 24px;
+    width: 24px;
+
+    &.even {
+        top: -28px;
+    }
+
+    & svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    @media mobile {
+        width: auto;
+        height: auto;
+
+        & svg {
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.nextYearFlag {
+    width: auto;
+    min-width: unset;
+    position: absolute;
+    right: 10px;
+
+    @media mobile {
+        display: none;
+    }
+}

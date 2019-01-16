@@ -1,0 +1,146 @@
+@value mobile from 'style/breakpoints';
+@value secondary, bg_cookies from 'style/colors';
+@value primary_font_black, primary_font_bold from 'style/fonts';
+
+.outContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.title {
+	font-family: primary_font_black;
+	font-size: 44px;
+	letter-spacing: 0.24px;
+	line-height: 48px;
+	text-align: center;
+	text-transform: uppercase;
+
+	@media mobile {
+		font-size: 26px;
+		line-height: 40px;
+		letter-spacing: 0.14px;
+	}
+}
+
+.container {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 436px);
+	justify-content: space-evenly;
+	width: 100%;
+	align-items: flex-start;
+
+	@media mobile {
+		grid-template-columns: repeat(auto-fill, 100%);
+		margin-top: 40px;
+		margin-bottom: 10px;
+		max-width: 620px;
+		overflow: hidden;
+	}
+}
+
+.card {
+	height: 110px;
+	border-radius: 4px;
+	background-color: white;
+	display: flex;
+	margin-bottom: 24px;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+
+	@media mobile {
+		width: 100%;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&.past{
+		opacity: 0.7;
+ 	}
+ 	&:hover {
+		 opacity: 1
+ 	}
+}
+
+.date {
+	height: 110px;
+	min-width: 72px;
+	border-radius: 4px 0 0 4px;
+	background-color: secondary;
+	color: bg_cookies;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	& span:nth-child(1) {
+		font-family: primary_font_black;
+		font-size: 32px;
+		font-weight: 900;
+		letter-spacing: 0.17px;
+		line-height: 32px;
+		text-align: center;
+		display: block;
+
+		&.smaller {
+			 font-size: 24px;
+	 	}
+ 	}
+
+	& span:nth-child(2) {
+		font-family: primary_font_bold;
+		font-size: 18px;
+		letter-spacing: -0.1px;
+		line-height: 26px;
+		text-align: center;
+		text-transform: uppercase;
+		display: block;
+	 }
+}
+
+.info {
+	font-family: primary_font_bold;
+	text-transform: uppercase;
+	padding: 16px;
+
+	& span {
+		color: secondary;
+		font-size: 12px;
+		font-weight: bold;
+		line-height: 14px;
+		display: block;
+	}
+
+	& p {
+		font-size: 18px;
+		letter-spacing: -0.1px;
+		line-height: 28px;
+		margin-top: 8px;
+
+		@media mobile {
+			text-transform: none;
+		}
+	}
+}
+
+.viewMore {
+	/*display: none;*/
+
+	@media mobile {
+		display: block;
+	}
+}
+
+.hideOnMobile {
+	@media mobile {
+		display: none;
+	}
+}
+
+.hideEvents {
+	display: none;
+}

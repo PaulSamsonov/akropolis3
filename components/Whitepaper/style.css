@@ -1,0 +1,178 @@
+@value main, secondary, bg_whitepaper, primary_btn_bg_2 from 'style/colors';
+@value mobile, small_mobile from 'style/breakpoints';
+@value primary_font_black, primary_font_regular, primary_font_bold, secondary_font from 'style/fonts';
+
+.whitepaper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    @media mobile {
+        align-items: center;
+        flex-direction: column-reverse;
+        position: relative;
+        top: -200px;
+    }
+}
+
+.informational {
+    
+}
+
+.whitepaperTitle {
+    max-width: 622px;
+    color: main;
+    font-family: primary_font_black;
+    text-transform: uppercase;
+    font-size: 44px;
+    letter-spacing: 0.24px;
+    line-height: 52px;
+
+    @media mobile {
+        max-width: 450px;
+        font-size: 26px;
+        line-height: 37px;
+        letter-spacing: 0.14px;
+        text-align: center;
+    }
+}
+
+.downloadDescription {
+    height: 28px;
+    color: main;
+    font-family: secondary_font;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+
+    @media mobile {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 65px;
+    }
+}
+
+.paper {
+    margin-top: 15px;
+
+    & p {
+        color: main;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 32px;
+
+        @media mobile {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.downloadText {
+    font-family: primary_font_regular;
+}
+
+.downloadSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+
+    @media mobile {
+        justify-content: center;
+    }
+
+    & select {
+        border-radius: 24px 0px 0 24px;
+        height: 48px;
+        width: 120px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+        border: none;
+        z-index: 2;
+        margin-right: -1px;
+        padding: 0 10px 0 20px;
+        font-size: 16px;
+        color: primary_btn_bg_2;
+        font-family: primary_font_bold;
+        background: url('../../assets/br_down_purple.png') no-repeat 88% #FFFFFF;
+        background-size: 12px 12px;
+        cursor: pointer;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+
+        @media mobile {
+            width: 105px;
+            height: 37px;
+            font-size: 13px;
+        }
+
+        @media small_mobile {
+            background-size: 10px 10px;
+            background-position: 90%;
+            padding: 0 10px 0 15px;
+            width: 90px;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 2px 4px 0 rgba(104,56,252,0.24);
+        }
+
+        &:hover {
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+            color: secondary;
+        }
+    }
+}
+
+.btnDownloadTechPaper {
+    display: flex;
+    justify-content: center;
+    width: 360px;
+
+    @media mobile {
+        width: 310px;
+        font-size: 13px;
+    }
+
+    @media small_mobile {
+        width: 290px;
+    }
+}
+.btnDownloadLightPaper {
+    white-space: nowrap;
+    border-radius: 0 24px 24px 0;
+    padding-left: 10px;
+    color: primary_btn_bg_2;
+
+    @media mobile {
+        font-size: 13px;
+    }
+
+    @media small_mobile {
+        padding-right: 15px;
+    }
+}
+
+.whitepaperLogo {
+    height: 450px;
+    margin-right: 50px;
+
+    @media mobile {
+        height: 250px;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    & img {
+        height: 100%;
+    }
+}

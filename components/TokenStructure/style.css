@@ -1,0 +1,130 @@
+@value main, secondary from 'style/colors';
+@value mobile from 'style/breakpoints';
+@value primary_font_black from 'style/fonts';
+
+.tokenStructure {
+
+    & .title {
+        color: main;
+        font-size: 44px;
+        font-family: primary_font_black;
+        text-transform: uppercase;
+        letter-spacing: 0.24px;
+        line-height: 48px;
+        text-align: center;
+        margin-bottom: 120px;
+
+        @media mobile {
+            font-size: 26px;
+            line-height: 48px;
+            margin-bottom: 40px;
+        }
+    }
+
+    & .figures {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        @media mobile {
+            flex-direction: column;
+        }
+        
+        & .item {
+            min-width: 355px;
+            margin-bottom: 80px;
+
+            @media mobile {
+                border-bottom: 1px solid #DCDCE0;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+            }
+
+            & .description {
+                color: secondary;
+                font-size: 18px;
+                letter-spacing: 0.1px;
+                line-height: 26px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+
+                @media mobile {
+                    font-size: 14px;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                & .primaryDescription {
+                    text-transform: uppercase;
+                }
+            }
+
+            & .value {
+                color: #5E5F66;
+                font-size: 42px;
+                letter-spacing: 0.23px;
+                line-height: 42px;
+                text-align: center;
+                margin-bottom: 15px;
+
+                @media mobile {
+                    font-size: 32px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.moreInfo {
+    position: relative;
+    margin-left: 10px;
+
+    & .icon {
+        opacity: 0.6;
+
+        @media mobile {
+            display: none;
+        }
+    }
+
+    & .tooltip {
+        box-shadow: 0 4px 8px 0 rgba(38,38,44,0.24);
+        border-radius: 4px;
+        right: 0;
+        position: absolute;
+        background-color: #F9F9F9;
+        font-size: 14px;
+        padding: 5px;
+        visibility: collapse;
+        opacity: 0;
+        transition: visibility 0s linear 300ms, opacity 300ms;
+        white-space: nowrap;
+        text-transform: normal;
+
+        @media mobile {
+            position: relative;
+            right: unset;
+            opacity: 1;
+            visibility: visible;
+            box-shadow: unset;
+            background-color: unset;
+            padding: 0;
+        }
+
+        &.visible {
+            opacity: 1;
+            visibility: visible;
+            transition: visibility 0s linear 0s, opacity 300ms;
+        }
+    }
+}
+
+.totalTokenSupply {
+    & .value {
+        font-family: primary_font_black;
+        color: #38393D;
+    }
+}
